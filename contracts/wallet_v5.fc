@@ -225,7 +225,7 @@ cell verify_c5_actions(cell c5, int is_external) inline {
     return (); ;; just receive Toncoins
   }
 
-  ;; bounced messages has 0xffffff prefix and skipped by op check
+  ;; bounced messages has 0xffffffff prefix and skipped by op check
 
   if (op == prefix::extension_action) {
     in_msg_body~skip_bits(size::message_operation_prefix);
